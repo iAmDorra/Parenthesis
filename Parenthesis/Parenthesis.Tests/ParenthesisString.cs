@@ -11,7 +11,7 @@
 
         internal bool IsValid()
         {
-            if (this.value.Contains("(") )
+            if (this.value.Contains("(") || this.value.Contains(")"))
                 return false;
             return true;
         }

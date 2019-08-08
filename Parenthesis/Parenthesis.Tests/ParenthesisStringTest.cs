@@ -19,6 +19,13 @@ namespace Parenthesis.Tests
             ParenthesisString parenthesisString = new ParenthesisString("(");
             Check.That(parenthesisString.IsValid()).IsFalse();
         }
+        
+        [TestMethod]
+        public void Should_return_false_when_string_contains_only_closing_parenthesis()
+        {
+            ParenthesisString parenthesisString = new ParenthesisString(")");
+            Check.That(parenthesisString.IsValid()).IsFalse();
+        }
 
        
     }
