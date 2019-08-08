@@ -13,5 +13,13 @@ namespace Parenthesis.Tests
             Check.That(parenthesisString.IsValid()).IsTrue();
         }
 
+        [TestMethod]
+        public void Should_return_false_when_string_contains_only_opening_parenthesis()
+        {
+            ParenthesisString parenthesisString = new ParenthesisString("(");
+            Check.That(parenthesisString.IsValid()).IsFalse();
+        }
+
+       
     }
 }
